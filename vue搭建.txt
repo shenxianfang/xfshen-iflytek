@@ -1,0 +1,102 @@
+﻿1.安装node.js --最新版自带npm
+
+2、  安装相关环境
+
+     npm install express -g（如安装后命令行 输入 express --version） 提示不是内部/外部命令，解决方式：
+解决方式：
+
+    看了别的参考资料，才发现是我没有全局安装express,我使用的安装命令是npm install express --save
+
+    全局安装的命令应该是：
+
+    npm install express-generator -g
+
+    所以卸载原来安装的express再重新使用全局安装命令就可以了
+
+
+     npm install jaden -g
+
+     npm install mysql -g
+
+
+搭建vue项目：
+1.安装vue --【npm install --global vue-cli】 （-global 意思是全局安装  这羊Vue会安装到 安装node 的文件夹下 否则会安装到 当前目录）
+
+2.验证安装成功 输入 【Vue --version】，出现Vue版本号，则说明Vue 安装成 功。
+
+3.1.# 创建一个基于 webpack 模板的新项目 【vue init webpack my-project】  my-project（项目文件夹名）
+执行这个命令后命令行会出现一些需要你填写选择的项目属性：
+（项目名称）
+（项目描述）
+（作者）.....
+
+4.运行测试                                                                                                                         
+
+进入文件夹  执行运行命令
+
+cd  ‘项目目录’
+
+npm run dev
+
+4.安装vue的框架  element-ui --安装框架 （命令行到当前项目目录下执行 npm i element-ui -S）、
+
+5.安装路由插件vue-router （命令行到当前项目目录下执行 npm install vue-router --save）
+
+
+
+
+未启用药品退回：
+'ph-in/list?whereCondition=' +"ds_code = '" + DsCode + "' and ph_code = '" + PhCode + "' and drug_id = " + drugId + " and drug_stock > lock_quantity
+
+可退数量：前端计算 drugStock-lockQuantity 
+
+已启用药品退回：
+'ph-in/list？whereCondition = '"ds_code = '" + DsCode + "' and ph_code = '" + PhCode + "' and drug_id = " + drugId + " and in_quantity > drug_stock"
+
+可退数量：前端计算 inQuantity-drugStock
+
+
+
+
+
+
+
+记录：
+vue父子组件之间的传值
+1.父组件往子组件传值 props ----》子组件通过props方法获取父组件传递的值
+2.子组件往父组件传值  emit事件
+
+Vuejs中关于computed、methods、watch的区别
+1.computed是在HTML DOM加载后马上执行的，如赋值；
+2.methods则必须要有一定的触发条件才能执行，如点击事件；
+3.watch用于观察Vue实例上的数据变动。对应一个对象，键是观察表达式，值是对应回调。值也可以是方法名，或者是对象，包含选项。
+----他们的执行顺序：默认加载的时候先computed再watch，不执行methods；等触发某一事件后，则是：先methods再watch。
+----computed 属性 vs watched 属性：Vue 确实提供了一种更通用的方式来观察和响应 Vue 实例上的数据变动：watch 属性。
+	当你有一些数据需要随着其它数据变动而变动时，你很容易滥用 watch——特别是如果你之前使用过 AngularJS。
+	然而，通常更好的想法是使用 computed 属性而不是命令式的 watch 回调。
+
+4.mounted 在这发起后端请求，拿回数据，配合路由钩子做一些事情 （dom渲染完成 组件挂载完成 ）
+
+
+vue中父子组件的关系可以总结为 prop 向下传递，事件向上传递。父组件通过 prop 给子组件下发数据，子组件通过事件给父组件发送消息；
+
+Prop 是单向绑定的：当父组件的属性变化时，将传导给子组件，但是反过来不会。这是为了防止子组件无意间修改了父组件的状态，来避免应用的数据流变得难以理解。
+另外，每次父组件更新时，子组件的所有 prop 都会更新为最新值。这意味着你不应该在子组件内部改变 prop。如果你这么做了，Vue 会在控制台给出警告。
+
+vue.js内置指令：
+v-if指令
+
+v-for指令
+
+v-show指令
+
+v-else指令
+
+v-bind指令
+
+v-on指令
+
+vue： ref 关联dom节点 -- js中使用 $ref.dom  -- $nextTick
+
+
+cmd:启动 adb connect 127.0.0.1:62001
