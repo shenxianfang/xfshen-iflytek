@@ -1,0 +1,24 @@
+Spring:
+  freemarker:
+    cache: false
+    suffix: .ftl
+
+logging:
+  file:
+    name: log.log
+
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/mybatis?useUnitcode=true&characterEncoding=utf-8
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+mybatis-plus:
+  # POJO别名包
+  type-aliases-package: com.iflytek.pojo
+  # Mapper映射文件加载路径
+  mapper-locations: classpath:mapper/*.xml
+  #控制台输出执行的sql语句
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl

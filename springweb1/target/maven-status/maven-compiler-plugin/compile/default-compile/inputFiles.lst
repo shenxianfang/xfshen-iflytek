@@ -1,0 +1,17 @@
+D:\flywork\springweb1\src\main\java\com\iflytek\controller\LoginController.java
+D:\flywork\springweb1\src\main\java\com\iflytek\config\RedisSessionConfig.java
+D:\flywork\springweb1\src\main\java\com\iflytek\Springweb1Application.java
+D:\flywork\springweb1\src\main\java\com\iflytek\controller\BaseController.java
+D:\flywork\springweb1\src\main\java\com\iflytek\service\UserService.java
+D:\flywork\springweb1\src\main\java\com\iflytek\pojo\LogBean.java
+D:\flywork\springweb1\src\main\java\com\iflytek\aspect\LogAspect.java
+D:\flywork\springweb1\src\main\java\com\iflytek\config\MvcConfig.java
+D:\flywork\springweb1\src\main\java\com\iflytek\controller\IndexController.java
+D:\flywork\springweb1\src\main\java\com\iflytek\dao\UserDao.java
+D:\flywork\springweb1\src\main\java\com\iflytek\aspect\WebAspect.java
+D:\flywork\springweb1\src\main\java\com\iflytek\service\impl\UserServiceImpl.java
+D:\flywork\springweb1\src\main\java\com\iflytek\component\LoginHandlerInterceptor.java
+D:\flywork\springweb1\src\main\java\com\iflytek\controller\UserController.java
+D:\flywork\springweb1\src\main\java\com\iflytek\pojo\User.java
+D:\flywork\springweb1\src\main\java\com\iflytek\controller\LogController.java
+D:\flywork\springweb1\src\main\java\com\iflytek\util\StaticData.java

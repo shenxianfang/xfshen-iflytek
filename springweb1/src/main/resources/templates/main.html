@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--<h1 th:text="${msg}"></h1>-->
+<div th:text="${msg}"></div>
+<div th:utext="${msg1}"></div>
+<table>
+    <tr>
+        <th>姓名</th>
+        <th>密码</th>
+        <th>住址</th>
+    </tr>
+    <tr th:each="u: ${list}">
+        <td th:text="${u.name}"></td>
+        <td  th:text="${u.pwd}"></td>
+        <td  th:text="${u.address}"></td>
+    </tr>
+</table>
+</body>
+</html>

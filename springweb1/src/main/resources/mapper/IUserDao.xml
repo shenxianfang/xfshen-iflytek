@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.iflytek.dao.IUserDao">
+    <select id="allUser" resultType="User">
+        select * from user
+    </select>
+
+    <select id="queryUser" resultType="User">
+        select * from user where id=#{id}
+    </select>
+
+    <select id="queryUserByAccount" resultType="User">
+        select * from user where account=#{account}
+    </select>
+
+    <!--useGeneratedKeys="true" keyProperty="id" id自增 -->
+    <insert id="insertUser" parameterType="User" useGeneratedKeys="true" keyProperty="id">
+        insert into user(account,name,pwd,address,phone,role_id) value(#{account},#{name},#{pwd},#{address},#{phone},#{roleId})
+    </insert>
+
+    <update id="updateUser" parameterType="User">
+        update user set account=#{account},name=#{name},pwd=${pwd},address=#{address},phone=#{phone},role_id=#{roleId} where id=#{id}
+    </update>
+
+    <delete id="deleteUser" parameterType="User">
+        delete from user where id = #{id}
+    </delete>
+</mapper>
